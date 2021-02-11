@@ -1,10 +1,110 @@
-body {
-  background-color: green;
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
 }
 .attribution {
   font-size: 11px;
   text-align: center;
+  width: 100%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+:root {
+  background: url(./images/pattern-curve.svg) bottom left no-repeat no-repeat;
+  height: 100vh;
+}
+body {
+  font-family: Inter;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+div {
+  padding: 0;
+  margin: 0;
+}
+.name {
+  font-weight: 700;
+  font-size: 60%;
+}
+.job {
+  color: hsl(240, 18%, 77%);
+  font-size: 60%;
+  font-weight: 500;
+}
+#block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 50px;
+  background: url(./images/pattern-quotes.svg) no-repeat no-repeat 18% 36%, url(./images/pattern-bg.svg) no-repeat no-repeat 90% 90%;
+}
+#quotePart {
+  position: absolute;
+  width: 650px;
+  color: hsl(240, 38%, 20%);
+  font-size: 32px;
+  margin-top: calc(110px);
+  margin-left: -35vw;
+  line-height: 140%;
+}
+.who {
+  font-size: 32px;
+}
+#imagePart {
+  margin-left: 565.5px;
+  box-shadow: 5px 45px 50px -50px hsl(240, 38%, 20%);
+}
+.hidden {
+  display: none;
+}
+.mybutton {
+  margin: calc(-60px/2);
+  position: absolute;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+  height: 60px;
+  margin-left: 80px;
+  border-radius: calc(60px/2);
+  border-style: none;
+}
+#rightArrow {
+  padding-right: 10px;
+}
+#leftArrow {
+  padding-left: 10px;
+}
+img {
+  display: block;
+}
+@media (max-width: 1050px) {
 }
