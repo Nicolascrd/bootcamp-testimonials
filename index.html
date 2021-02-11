@@ -68,7 +68,11 @@
     if((event.key === 'ArrowRight')||(event.key === "ArrowLeft")){
       switchTestimonials();
     }
-    })
+    });
+
+    //2 testimonials only so no need to split between left side of button and right side.
+    document.querySelector('.mybutton').addEventListener('click', switchTestimonials);
+    
 
     //when page loads, we don't want john testimonial
     doTheSwitch(".john");
