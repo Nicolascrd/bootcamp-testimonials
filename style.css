@@ -35,9 +35,6 @@
   color: hsl(228, 45%, 44%);
 }
 /* A supprimer, sert pour delimiter les parties sur la page */
-body {
-  background-color: aqua;
-}
 #quotePart {
   background-color: red;
 }
@@ -67,7 +64,7 @@ img {
   justify-content: center;
 }
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: 100vw;
   height: 100vh;
@@ -156,6 +153,7 @@ body {
     padding-top: 230px;
     max-width: 480px;
     z-index: 1;
+    padding-left: 60px;
   }
   /* Pour le bouton */
   .mybutton {
@@ -178,8 +176,5 @@ body {
   }
   #imagePart {
     padding: 100px 130px 150px 100px;
-  }
-  body {
-    padding-left: 60px;
   }
 }
