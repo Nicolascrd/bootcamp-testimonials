@@ -34,77 +34,152 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-:root {
-  background: url(./images/pattern-curve.svg) bottom left no-repeat no-repeat;
-  height: 100vh;
-}
+/* A supprimer, sert pour delimiter les parties sur la page */
 body {
-  font-family: Inter;
-  font-weight: 200;
-  margin: 0;
-  padding: 0;
-}
-div {
-  padding: 0;
-  margin: 0;
-}
-.name {
-  font-weight: 700;
-  font-size: 60%;
-}
-.job {
-  color: hsl(240, 18%, 77%);
-  font-size: 60%;
-  font-weight: 500;
-}
-#block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 110px;
-  padding-bottom: 50px;
-  background: url(./images/pattern-quotes.svg) no-repeat no-repeat 18% 36%, url(./images/pattern-bg.svg) no-repeat no-repeat 90% 90%;
+  background-color: aqua;
 }
 #quotePart {
-  position: absolute;
-  width: 650px;
-  color: hsl(240, 38%, 20%);
-  font-size: 32px;
-  margin-top: calc(110px);
-  margin-left: -35vw;
-  line-height: 140%;
-}
-.who {
-  font-size: 32px;
+  background-color: red;
 }
 #imagePart {
-  margin-left: 565.5px;
-  box-shadow: 5px 45px 50px -50px hsl(240, 38%, 20%);
+  background: yellow;
 }
+/* Pour changer entre les temoignagnes, il faut en cacher un des deux*/
 .hidden {
   display: none;
 }
-.mybutton {
-  margin: calc(-60px/2);
-  position: absolute;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 110px;
-  height: 60px;
-  margin-left: 80px;
-  border-radius: calc(60px/2);
-  border-style: none;
+/* Concernant les crédits en bas de page */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
 }
-#rightArrow {
-  padding-right: 10px;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-#leftArrow {
-  padding-left: 10px;
-}
+/** Pour tout le reste de la page */
 img {
   display: block;
 }
-@media (max-width: 1050px) {
+#page {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/* Pour les polices et les couleurs */
+#quotePart {
+  color: hsl(240, 38%, 20%);
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 300;
+}
+.who {
+  font-size: 20px;
+  font-weight: 500;
+}
+.name {
+  font-weight: 700;
+}
+.job {
+  color: hsl(240, 18%, 77%);
+}
+/* Pour le bouton */
+.mybutton {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+/* CSS spécifique à la vue mobile (image à 375px)*/
+@media (max-width: 1250px) {
+  #imagePart {
+    max-width: 70%;
+    padding: 15% 15% 8%;
+  }
+  .tanya,
+  .john {
+    width: 100%;
+  }
+  .mybutton {
+    width: 65px;
+    height: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    border: 0;
+    margin-top: -15px;
+    margin-left: 38%;
+    z-index: 2;
+    background: white;
+  }
+  #leftArrow {
+    padding-left: 5px;
+  }
+  #rightArrow {
+    padding-right: 5px;
+  }
+  .who {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+  }
+  #quotePart {
+    text-align: center;
+    width: min(85%, 600px);
+    font-size: 18px;
+    padding-top: 50px;
+  }
+  body {
+    display: block;
+    margin: auto;
+  }
+}
+/* CSS spécifique à la vue desktop (image à 1440px) */
+@media (min-width: 1250px) {
+  .quote {
+    margin-right: -170px;
+    line-height: 130%;
+  }
+  #quotePart {
+    padding-top: 230px;
+    max-width: 480px;
+    z-index: 1;
+  }
+  /* Pour le bouton */
+  .mybutton {
+    width: 110px;
+    height: 54px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 27px;
+    border: 0;
+    margin-top: -27px;
+    margin-left: 60px;
+    z-index: 2;
+    background: white;
+  }
+  #leftArrow {
+    padding-left: 10px;
+  }
+  #rightArrow {
+    padding-right: 10px;
+  }
+  #imagePart {
+    padding: 100px 130px 150px 100px;
+  }
+  body {
+    padding-left: 60px;
+  }
 }
