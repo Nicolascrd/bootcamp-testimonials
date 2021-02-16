@@ -34,12 +34,19 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-/* A supprimer, sert pour delimiter les parties sur la page */
+/* Background */
+body {
+  background-image: url('images/pattern-curve.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
 #quotePart {
-  background-color: red;
+  background-image: url('images/pattern-quotes.svg');
+  background-repeat: no-repeat;
 }
 #imagePart {
-  background: yellow;
+  background-image: url('images/pattern-bg.svg');
+  background-repeat: no-repeat;
 }
 /* Pour changer entre les temoignagnes, il faut en cacher un des deux*/
 .hidden {
@@ -57,6 +64,9 @@
 /** Pour tout le reste de la page */
 img {
   display: block;
+}
+img.main {
+  border-radius: 1%;
 }
 #page {
   display: flex;
@@ -136,11 +146,26 @@ body {
     text-align: center;
     width: min(85%, 600px);
     font-size: 18px;
-    padding-top: 50px;
+    padding-top: 15px;
   }
   body {
     display: block;
     margin: auto;
+  }
+  /* Background */
+  #quotePart {
+    background-position: top center;
+    background-size: 20%;
+  }
+  #imagePart {
+    background-position: center center;
+    background-size: 90%;
+  }
+  body {
+    background-size: 55%;
+  }
+  img.main {
+    box-shadow: -40px 100px 30px -80px hsl(240, 18%, 77%);
   }
 }
 /* CSS spécifique à la vue desktop (image à 1440px) */
@@ -175,6 +200,16 @@ body {
     padding-right: 10px;
   }
   #imagePart {
-    padding: 100px 130px 150px 100px;
+    padding: 96px 130px 150px 100px;
+  }
+  img.main {
+    box-shadow: -110px 170px 50px -140px hsl(240, 18%, 77%);
+  }
+  /*Background*/
+  #quotePart {
+    background-position: 38% 27%;
+  }
+  #imagePart {
+    background-position: center 20%;
   }
 }
