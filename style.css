@@ -107,7 +107,7 @@ body {
   justify-content: space-between;
 }
 /* CSS spécifique à la vue mobile (image à 375px)*/
-@media (max-width: 1250px) {
+@media (max-width: 1310px) {
   #imagePart {
     max-width: 70%;
     padding: 15% 15% 8%;
@@ -169,7 +169,7 @@ body {
   }
 }
 /* CSS spécifique à la vue desktop (image à 1440px) */
-@media (min-width: 1250px) {
+@media (min-width: 1310px) {
   .quote {
     margin-right: -170px;
     line-height: 130%;
